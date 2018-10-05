@@ -1,0 +1,20 @@
+ok 1)write a recipe to create below users and groups and change permissions
+   groups: dba ; unixgrp ; webgrp
+   users: unixadm1 ; unixadm2 ; unixadm3 --> all are part of unixgrp
+   users: webuser1 ; webuser2 ; webuser3 --> all are part of webgrp
+   users: oracle1 ; oracle2 ; oracle3 --> all are part of dba
+   all users home directory permission should be 744
+   
+ok 2) create a recipe to install ntp package and make sure ntp service is enabled and started. edit /etc/ntp.conf to point to ntp servers(utcnist.colorado.edu ; utcnist2.colorado.edu)
+ok 3) create a recipe to check the operration system version is rhel or ubntu and based on OS install apache
+ok 4) create a recipe to update /etc/hosts file looks like below
+   ipadder			fqdn				hostname
+ex: 192.168.1.20   test.veritis.com		test
+ok 5) recipe to update /etc/resolve.conf with name servers
+ex : domain veritis.local
+	 nameserver 8.8.8.8
+ok 6) chef recipe to configure yum client configuration file with yum server info
+   /etc/yum.repos.d/test.repos
+ok 7) recipe to delete user unixadm3
+8) write a bash script to print 10 number and create a file /tmp/bashout.txt. also make sure it's idempotent
+9) recipe to create a cron job to run the above script every day at 11am
